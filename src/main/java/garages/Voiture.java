@@ -103,8 +103,10 @@ public class Voiture {
 	 */
 	public void imprimeStationnements(PrintStream out) {
 		Set<Garage> listGarage = garagesVisites();
+		//on parcourt chaque garage de notre liste de garage
 		for(Garage garage : listGarage){
 			out.println(garage.toString());
+			//On cherche chaque stationnement effectué et on affiche
 			for(Stationnement stationnement : myStationnements){
 				if(stationnement.getGarage().equals(garage)){
 					out.println(stationnement.toString());
